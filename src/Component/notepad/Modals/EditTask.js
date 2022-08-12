@@ -98,15 +98,15 @@ const EditTask = ({ modal, setModal, toggle, UpdateTask, taskObj }) => {
                 </form>
             </ModalBody>
             <ModalFooter>
-                <span style={{ display: "flex" }}>
+                <span style={{ display: "flex", gap: '10px', justifyContent: 'space-evenly' }}>
                     <Button
-                        style={{ width: "200px", marginRight: "20px", backgroundColor: '#f1ba40d9', color: "gray" }}
+                        style={{ width: "173px", marginLeft: "0px", backgroundColor: '#f1ba40d9', color: "gray" }}
                         onClick={handleUpdate}
                     >
                         Update
                     </Button>
                     <Button
-                        style={{ width: "200px", marginRight: "20px", backgroundColor: '#f1ba40d9', color: "gray" }}
+                        style={{ width: "173px", marginRight: "20px", backgroundColor: '#f1ba40d9', color: "gray" }}
                         onClick={toggle}
                     >
                         Cancel

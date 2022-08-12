@@ -18,7 +18,7 @@ const Card = ({ taskObj, index, deleteTask, updateListTask }) => {
     updateListTask(obj, index)
   }
   return (
-    <div className="card--wrapperr" style={{ width: "30vw", height: "30vh", boxShadow: " 0px 3px 20px #A5A5A5", display: "flex", flexDirection: "column", position: "relative", margin: '10px 10px', }}>
+    <div className="card--wrapperr" style={{ width: "34vw", height: "30vh", boxShadow: " 0px 3px 20px #A5A5A5", display: "flex", flexDirection: "column", position: "relative", margin: '10px 10px' }}>
 
       <div className="card-top" style={{ backgroundColor: "", height: "3px" }}></div>
 
@@ -31,18 +31,18 @@ const Card = ({ taskObj, index, deleteTask, updateListTask }) => {
           onClick={() => HandleDelete(index)} />
       </div>
 
-      <div className="task-holder" kay={new Date().getTime().toString()} style={{ padding: "5px", marginTop: '20px' }}>
-        <span className="card-holder" style={{ borderRadius: "10px", right: '40px', fontSize: "0.8rem", padding: '5px', fontWeight: 'bold', color: "gray" }}>
+      <div className="task-holder" kay={new Date().getTime().toString()} style={{ padding: "5px", marginTop: '20px', alignItems: 'center' }}>
+        <span className="card-holder" style={{ width: "30vw", fontSize: "0.8rem", padding: '5px', fontWeight: 'bold', color: "gray", textTransform: 'capitalize', lineHeight: '1px', textShadow: "0 0 black", textAlign: "justify" }}>
           {taskObj.Name}
         </span>
 
-        <p style={{ fontSize: "12px", color: "gray" }}>{taskObj.Status}</p>
+        <p style={{ fontSize: "12px", color: "gray",paddingTop:'10px',marginBottom:'0px'}}>{taskObj.Status}</p>
 
-        <div className="description" style={{ margin: '10px', }}>
-          <p style={{ fontSize: "12px", overflowY: "scroll", width: "25vw", height: '9vh', position: 'absolute', color: "gray" }}>{taskObj.description}</p>
+        <div className="description">
+          <p style={{ fontSize: "12px", overflowY: "scroll", width: "30vw", height: '12vh', position: 'absolute', color: "gray", textAlign: "justify", marginTop: '0px',marginBottom:'0px' }}>{taskObj.description}</p>
         </div>
 
-        <div style={{ position: "absolute", left: "10px", bottom: "10px", fontSize: "0.8rem", fontWeight: 'bold', color: "gray" }}> {taskObj.developer}</div>
+        <div style={{ position: "absolute", left: "10px", bottom: "10px", fontSize: "0.8rem", fontWeight: 'bold', color: "gray", textTransform: 'capitalize' }}> {taskObj.developer}</div>
       </div>
       <EditTask modal={modal} setModal={setModal} toggle={toggle} UpdateTask={UpdateTask} taskObj={taskObj} />
     </div>

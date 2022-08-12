@@ -38,9 +38,10 @@ const ToDoArea = () => {
         <>
             <div className="todoArea">
                 <div className="addTODO">
-                    <button className="addButton" style={{ fontWeight: 'bold', color: "gray" }} onClick={() => { setModal(true) }}> ADD TASK</button>
+                    <button className="addButton" style={{ fontWeight: 'bold', color: "gray" }} onClick={() => { setModal(true) }}> Task-Stock
+                    </button>
                 </div>
-                <div className="task-container" style={{ overflowY: 'scroll' }}>
+                <div className="task-container" style={{ overflowY: 'scroll',display:'flex',flexWrap:'wrap',justifyContent:'center',paddingTop:'20px' }}>
                     {taskList &&
                         taskList.map((obj, index) => (
                             <Card taskObj={obj} index={index} deleteTask={deleteTask} updateListTask={updateListTask} setTaskList={setTaskList} taskList={taskList} />

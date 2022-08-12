@@ -257,7 +257,6 @@ header {
 
 .task-container {
   width: 100%;
-  padding-left: 40px;
   padding-top: 20px;
   margin-top: 43px;
   display: flex;
@@ -372,5 +371,21 @@ header {
     left: 0px;
     width: 500px;
   }
+  .section1{
+    gap: 16px;
+    width: 160px;
+  }
+  .icon_div {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 18px;
+    color: gray;
+    padding-left: 0px;
+    cursor: pointer;
+    height: 70px;
+    transition: all 0.3s ease-in-out;
+}
 
 }
