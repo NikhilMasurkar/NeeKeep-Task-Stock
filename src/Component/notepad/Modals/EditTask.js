@@ -39,6 +39,7 @@ const EditTask = ({ modal, setModal, toggle, UpdateTask, taskObj }) => {
         taskObj["developer"] = developer;
         UpdateTask(taskObj);
         setModal(false)
+        
     };
 
     return (

@@ -18,7 +18,7 @@ const Card = ({ taskObj, index, deleteTask, updateListTask }) => {
     updateListTask(obj, index)
   }
   return (
-    <div className="card--wrapperr" style={{ width: "34vw", height: "30vh", boxShadow: " 0px 3px 20px #A5A5A5", display: "flex", flexDirection: "column", position: "relative", margin: '10px 10px' }}>
+    <div className="card--wrapperr" >
 
       <div className="card-top" style={{ backgroundColor: "", height: "3px" }}></div>
 
@@ -39,7 +39,7 @@ const Card = ({ taskObj, index, deleteTask, updateListTask }) => {
         <p style={{ fontSize: "12px", color: "gray",paddingTop:'10px',marginBottom:'0px'}}>{taskObj.Status}</p>
 
         <div className="description">
-          <p style={{ fontSize: "12px", overflowY: "scroll", width: "30vw", height: '12vh', position: 'absolute', color: "gray", textAlign: "justify", marginTop: '0px',marginBottom:'0px' }}>{taskObj.description}</p>
+          <p >{taskObj.description}</p>
         </div>
 
         <div style={{ position: "absolute", left: "10px", bottom: "10px", fontSize: "0.8rem", fontWeight: 'bold', color: "gray", textTransform: 'capitalize' }}> {taskObj.developer}</div>

@@ -22,6 +22,8 @@ const TodoPopup = ({ modal, toggle, save }) => {
     };
 
     const handleSave = (e) => {
+        if(taskTitle && description && Status && developer){
+
         e.preventDefault();
         let taskObj = {};
         taskObj["Name"] = taskTitle;
@@ -29,6 +31,9 @@ const TodoPopup = ({ modal, toggle, save }) => {
         taskObj["Status"] = Status;
         taskObj["developer"] = developer;
         save(taskObj);
+        }else{
+            alert('please enter task');
+        }
     };
 
     return (
